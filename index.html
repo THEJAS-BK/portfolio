@@ -3,15 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio of Thejas, a computer science student and full-stack developer." />
+    <meta name="description" content="Portfolio of Thejas, a computer science student and full-stack developer building interactive, reliable software." />
+    <meta name="author" content="Thejas" />
+    <meta name="robots" content="index, follow" />
+    <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#0a0a0c" />
-    <title>Thejas | Developer</title>
+
+    <title>Thejas — Computer Science Student & Full-Stack Developer</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Thejas" />
+    <meta property="og:title" content="Thejas — Computer Science Student & Full-Stack Developer" />
+    <meta property="og:description" content="Full-stack engineering, interactive applications and system design. Selected projects from a computer science student and developer." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Thejas — Computer Science Student & Full-Stack Developer" />
+    <meta name="twitter:description" content="Full-stack engineering, interactive applications and system design." />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Thejas",
+        "jobTitle": "Computer Science Student and Full-Stack Developer",
+        "description": "Computer science student and full-stack developer interested in interactive applications and system design.",
+        "knowsAbout": ["Full-stack development", "React", "TypeScript", "Node.js", "System design"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <p style="font-family: system-ui, sans-serif; padding: 2rem; line-height: 1.6">
+        This portfolio needs JavaScript to show the interactive version. In the meantime:
+        Thejas — computer science student and full-stack developer.
+      </p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

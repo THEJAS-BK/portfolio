@@ -11,10 +11,45 @@
   --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; background: var(--color-ink); }
-body { @apply bg-ink text-bone font-sans antialiased; }
-::selection { background: var(--color-accent); color: var(--color-ink); }
-:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: 2px; }
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+  background: var(--color-ink);
+  scrollbar-color: var(--color-line) var(--color-ink);
+  scrollbar-width: thin;
+}
+
+body {
+  @apply bg-ink text-bone font-sans antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Static noise overlay: cheap, no runtime cost. */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Stand-in for the 3D scene while its chunk loads. */
+.scene-fallback {
+  background: radial-gradient(circle at 62% 42%, rgb(139 124 255 / 0.22), transparent 62%);
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

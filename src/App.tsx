@@ -19,6 +19,8 @@ export default function App() {
         <Skills />
         <Contact />
       </main>
+      {/* Film grain ties the flat panels and the 3D scene together. */}
+      <div className="grain" aria-hidden />
     </>
   )
 }

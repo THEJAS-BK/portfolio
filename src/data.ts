@@ -1,4 +1,5 @@
-// Everything on the page is edited here.
+// All page copy and content lives here. Components only handle layout.
+
 export const profile = {
   name: 'Thejas',
   initials: 'TJ',
@@ -16,6 +17,38 @@ export const nav = [
   { id: 'skills', label: 'Skills' },
   { id: 'contact', label: 'Contact' },
 ]
+
+export const copy = {
+  hero: {
+    availability: 'Available for opportunities',
+    headline: 'Building digital experiences that work beautifully.',
+    intro:
+      'I’m a computer science student and developer interested in full-stack engineering, interactive applications and system design.',
+    primaryCta: { label: 'Explore my work', href: '#projects' },
+    secondaryCta: { label: 'Get in touch', href: '#contact' },
+    scroll: 'Scroll',
+  },
+  about: {
+    eyebrow: 'About',
+    heading: 'Practical software, and the systems underneath it.',
+    interestsLabel: 'Areas of interest',
+    learningLabel: 'Learning now',
+  },
+  projects: {
+    eyebrow: 'Selected work',
+    heading: 'Projects',
+  },
+  skills: {
+    eyebrow: 'Toolkit',
+    heading: 'Skills',
+    intro: 'The tools I reach for, grouped by where they live in the stack.',
+  },
+  contact: {
+    eyebrow: 'Contact',
+    heading: 'Let’s build something worth using.',
+    backToTop: 'Back to top',
+  },
+} as const
 
 export const about = {
   intro: [
